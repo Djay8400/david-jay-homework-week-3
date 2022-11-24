@@ -76,7 +76,6 @@ const specialChar = [
   "]",
   "{",
   "}",
-  "",
   "|",
   ":",
   ";",
@@ -147,8 +146,11 @@ const generatePassword = () => {
     generatePassword();
   }
 
-  // console.log(specialChar.length);
+  let result = "";
 
-  // let randomChar = Math.floor(Math.random() * charTypes.length);
-  // console.log(randomChar);
+  for (let i = 0; i < passLength; i++) {
+    result += charTypes[Math.floor(Math.random() * charTypes.length)];
+    console.log(result);
+  }
+  return result;
 };
