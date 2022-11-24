@@ -87,12 +87,6 @@ const specialChar = [
   "?",
 ];
 
-console.log(lowercaseChar.length);
-console.log(uppercaseChar.length);
-console.log(numberChar.length);
-console.log(specialChar.length);
-console.log("specialChar.length");
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -127,19 +121,15 @@ const generatePassword = () => {
   if (lowercase || uppercase || numeric || special) {
     if (lowercase) {
       charTypes = lowercaseChar;
-      console.log(charTypes);
     }
     if (uppercase) {
       charTypes = charTypes.concat(uppercaseChar);
-      console.log(charTypes);
     }
     if (numeric) {
       charTypes = charTypes.concat(numberChar);
-      console.log(charTypes);
     }
     if (special) {
       charTypes = charTypes.concat(specialChar);
-      console.log(charTypes);
     }
   } else {
     window.alert("You have to choose at least one.\n\nRestarting...");
@@ -150,7 +140,6 @@ const generatePassword = () => {
 
   for (let i = 0; i < passLength; i++) {
     result += charTypes[Math.floor(Math.random() * charTypes.length)];
-    console.log(result);
   }
   return result;
 };
